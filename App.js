@@ -116,6 +116,9 @@ export default function App() {
                 handleScan(data.data);
               }
             }}
+            barcodeScannerSettings={{
+              barCodeTypes: ["qr", "pdf417"],
+            }}
           >
             <View style={styles.square}></View>
           </CameraView>
@@ -232,8 +235,8 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     marginBottom: 20,
     textAlign: "center",
-    borderBottomColor: "white",
-    borderBottomWidth: 1,
+    borderColor: "white",
+    borderWidth: 1,
     alignItems: "center",
     justifyContent: "center",
     color: "white",
